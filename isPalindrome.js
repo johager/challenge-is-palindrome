@@ -32,16 +32,17 @@ function isPalindrome(str) {
     return true
 }
 
-function runIsPalindrome(str) {
+function run(callback, str) {
     //console.log("---", str, "---")
-    console.log(str, "isPalindrome:", isPalindrome(str))
+    console.log(`isPalindrome('${str}'):`, callback(str))
 }
 
-runIsPalindrome('a')
-runIsPalindrome('noon')
-runIsPalindrome('hello')
-runIsPalindrome('Racecar')
-runIsPalindrome('racecar')
+console.log("=== test isPalindrome ===")
+run(isPalindrome, 'a')
+run(isPalindrome, 'noon')
+run(isPalindrome, 'hello')
+run(isPalindrome, 'Racecar')
+run(isPalindrome, 'racecar')
 
 
 const isPalindrome2 = (str) => {
@@ -50,8 +51,9 @@ const isPalindrome2 = (str) => {
     return rts.join('') === str
 }
 
-console.log("isPalindrome2('a'):", isPalindrome2('a'))
-console.log("isPalindrome2('noon'):", isPalindrome2('noon'))
-console.log("isPalindrome2('hello'):", isPalindrome2('hello'))
-console.log("isPalindrome2('Racecar'):", isPalindrome2('Racecar'))
-console.log("isPalindrome2('racecar'):", isPalindrome2('racecar'))
+console.log("=== test isPalindrome2 ===")
+run(isPalindrome2, 'a')
+run(isPalindrome2, 'noon')
+run(isPalindrome2, 'hello')
+run(isPalindrome2, 'Racecar')
+run(isPalindrome2, 'racecar')
